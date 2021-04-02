@@ -19,7 +19,6 @@ A script to automatically save [SHSH blobs](https://www.theiphonewiki.com/wiki/S
     - Add `*/10 * * * * /bin/bash -c "cd AUTOTSS_DIR && python3 autotss.py"` to your crontab
         - Replace `AUTOTSS_DIR` with the full path to your AutoTSS-cli folder
         - This runs every 10 minutes, but the frequency can be altered by changing the `10` in `*/10` to a different number of minutes.
-            - It's not recommended to go any lower than 10 minutes, as this may result in your IP being blacklisted from Apple's servers
 
 ## Requirements
 * python 3
