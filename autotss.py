@@ -75,13 +75,13 @@ class autotss:
         if tsschecker.returncode == 0:
             path = tsschecker.stdout[:-1]
         else:
-            sys.exit(f"[ERROR] tsschecker was not found. Build & install the latest version from 'https://github.com/tihmstar/tsschecker'. Exiting...")
+            sys.exit(f"[ERROR] tsschecker was not found. Build & install the latest version from 'https://github.com/DanTheMann15/tsschecker'. Exiting...")
 
         tsschecker = subprocess.run((path), stdout=subprocess.PIPE, universal_newlines=True)
 
         version = int(tsschecker.stdout.split('\n')[0].split('-')[1][1:])
-        if version < 319:
-            sys.exit("[ERROR] Your version of tsschecker is too old. Build & install the latest version from https://github.com/tihmstar/tsschecker. Exiting...")
+        if version < 321:
+            sys.exit("[ERROR] Your version of tsschecker is too old. Build & install the latest version from https://github.com/DanTheMann15/tsschecker. Exiting...")
 
         return path
 
